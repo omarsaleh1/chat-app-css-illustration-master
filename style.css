@@ -150,6 +150,7 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+    gap: 5px;
 }
 .options {
     background-image: linear-gradient(to right,hsl(293, 100%, 63%),hsl(264, 100%, 61%));
@@ -173,7 +174,6 @@ header {
 .duration {
     font-size: x-small;
     margin-right: 30%;
-    color: ;
 }
 .input {
     position: relative;
@@ -215,4 +215,55 @@ header {
     color: hsl(270, 7%, 64%);
     padding: 10px;
     text-wrap: balance;
+}
+@media (max-width:1300px) {
+    main {
+        width: 70%;
+    }
+}
+@media (max-width:800px) {
+    body {
+        overflow-x: hidden;
+        width: 95%;
+        height: 150vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2,1fr);
+    }
+    .none {
+        display: none;
+    }
+    .one {
+        width: 100%;
+        transform: translate(-50%);
+    }
+    .two {
+        width: 100%;
+        transform: translate(50%);
+        /* overflow: hidden; */
+    }
+    main {
+        flex-direction: column;
+        transform: none;
+        top: auto;
+        left: auto;
+        width: auto;
+        padding: 30px;
+    }
+    .mobile {
+        width: auto;
+        height: auto;
+    }
+    .pragraph {
+        text-align: center;
+        text-wrap: balance;
+    }
+    footer {
+        z-index: 10;
+        position: sticky;
+        transform: none;
+        bottom: 1px;
+        left: auto;
+        text-align: center;
+        padding: auto;
+    }
 }
